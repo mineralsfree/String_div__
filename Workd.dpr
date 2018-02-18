@@ -309,7 +309,10 @@ begin
     end;
   end;
   if(isEqual) then
-    writeln('kek');
+  begin
+    writeln(currnum);
+    Exit;
+  end
 end;
 
 begin
@@ -331,12 +334,6 @@ begin
 
   while cmpArrAndStr(currnum,maxNumInp) do
   begin
-    if (cmpThis(currnum, inp)) then
-    begin
-      writeln(currnum);
-      readln;
-      exit;
-    end;
     currnum := currnum + k;
     // writeln(currnum);
   end;
