@@ -9,15 +9,15 @@ type
   LongNum=Array[1..1000] of Integer;
   TCompareRez = (Equally, More, Less);
 var
-  Ab,nb,na,nrez,i:Integer;
+  Ab,nb,nrez,i:Integer;
   a,b,rez: LongNum;
-n,j: Integer;
+n: Integer;
 k: string;
-inp,tmp:string;
+inp:string;
 numInp:string;
 maxNumInp:string;
-currnum:LongNum;
-numdiv:longNum;
+currnum:int64;
+numdiv:int64;
 function GetN(a:LongNum; n:Integer = 1):Integer;
 var
   i:Integer;
@@ -270,6 +270,7 @@ sr:string;
 
 begin
   Result := true;
+  sr := IntToStr(currnum);
 
   for i := 1 to length(inp) do
   begin
@@ -299,10 +300,8 @@ begin
   //writeln(numInp);
   a:=EnterNum(na,numInp) ;
   b:=EnterNum(nb,k);
-
-
-  numdiv := Divide(a,b,na,nb,nrez);
-  currnum := Multiply(numdiv,b,na,nb,nrez);
+  numdiv := numInp div k;
+  currnum := numdiv*k;
   // Writeln(currnum);
   while currnum <= maxNumInp do
   begin
