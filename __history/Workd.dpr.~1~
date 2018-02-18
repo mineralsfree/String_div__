@@ -5,31 +5,16 @@ program Workd;
 
 uses
   SysUtils;
-type
-  LongNum=Array[1..100] of Integer;
-  TCompareRez = (Equally, More, Less);
+
 var
-  nb,nrez,i:Integer;
-  b,rez: LongNum;
 n: Integer;
 k: string;
 inp:string;
 numInp:int64;
 maxNumInp:int64;
+i:integer;
 currnum:int64;
 numdiv:int64;
-function GetN(a:LongNum; n:Integer = 1):Integer;
-var
-  i:Integer;
-begin
-  for i := 101-n to 100 do
-  if (a[i] <> 0)then  //Нашли отличную от 0 цифру - здесь и начинается число
-  begin
-    GetN:=101-i ;
-    Exit;
-  end;
-  GetN:=0;
-end;
 function Zero:LongNum;
 var
   rez:LongNum;
@@ -40,7 +25,8 @@ begin
     Zero:=rez;
 end;
 
-function EnterNum (out n:Integer; var sc:string ) : LongNum;
+//Ââîä ÷èñëà
+function EnterNum (out n:Integer, var sc:string ) : LongNum;
 var
   s:String;
   i:Integer;
