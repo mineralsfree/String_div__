@@ -296,12 +296,14 @@ begin
   end;
   numInp := questionToZero(inp);
   maxNumInp := questionToNine(inp);
-
+  //writeln(numInp);
   a:=EnterNum(na,numInp) ;
   b:=EnterNum(nb,k);
+
+
   numdiv := Divide(a,b,na,nb,nrez);
   currnum := Multiply(numdiv,b,na,nb,nrez);
-
+  // Writeln(currnum);
   while currnum <= maxNumInp do
   begin
     if (cmpThis(currnum, inp)) then
