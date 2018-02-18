@@ -6,7 +6,7 @@ program Workd;
 uses
   SysUtils;
 type
-  LongNum=Array[1..1000] of Integer;
+  LongNum=Array[1..100] of Integer;
   TCompareRez = (Equally, More, Less);
 var
   nb,nrez,i:Integer;
@@ -22,7 +22,7 @@ function GetN(a:LongNum; n:Integer = 1):Integer;
 var
   i:Integer;
 begin
-  for i := 1001-n to 1000 do
+  for i := 101-n to 100 do
   if (a[i] <> 0)then  //Нашли отличную от 0 цифру - здесь и начинается число
   begin
     GetN:=101-i ;
