@@ -9,13 +9,13 @@ type
   LongNum=Array[1..1000] of Integer;
   TCompareRez = (Equally, More, Less);
 var
-  Ab,nb,nrez,i:Integer;
-  a,b,rez: LongNum;
+  nb,nrez,i:Integer;
+  b,rez: LongNum;
 n: Integer;
 k: string;
 inp:string;
-numInp:string;
-maxNumInp:string;
+numInp:int64;
+maxNumInp:int64;
 currnum:int64;
 numdiv:int64;
 function GetN(a:LongNum; n:Integer = 1):Integer;
@@ -298,7 +298,7 @@ begin
   numInp := questionToZero(inp);
   maxNumInp := questionToNine(inp);
   //writeln(numInp);
-  a:=EnterNum(numInp) ;
+  a:=EnterNum(numInp)
   b:=EnterNum(k);
   numdiv := numInp div k;
   currnum := numdiv*k;
