@@ -1,4 +1,4 @@
-﻿program Workd;
+program Workd;
 
 {$APPTYPE CONSOLE}
 
@@ -309,7 +309,10 @@ begin
     end;
   end;
   if(isEqual) then
-    writeln('kek');
+  begin
+    writeln(currnum);
+    Exit;
+  end
 end;
 
 begin
@@ -331,15 +334,8 @@ begin
 
   while cmpArrAndStr(currnum,maxNumInp) do
   begin
-
-      for i := 1001-nrez to 1000 do
-      Write(currnum[i]);
-      readln;
-      exit;
-
-    currnum := Add(currnum,b,na,nb,nrez)
-
-
+    currnum := currnum + k;
+    // writeln(currnum);
   end;
   writeln('-1');
 
